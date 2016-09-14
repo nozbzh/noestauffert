@@ -52,7 +52,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '5.0.0.beta3'
 # gem 'puma'
-gem "passenger", ">= 5.0.30", require: "phusion_passenger/rack_handler"
+gem "passenger", ">= 5.0.30"
 gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
