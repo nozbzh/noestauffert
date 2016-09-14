@@ -1,0 +1,69 @@
+/* -------------------------------------
+ * Utilities classes
+ * These are examples of utilities classes
+ * Feel free to change them and create your own
+ * ------------------------------------- */
+
+// Paddings
+.padded {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.padded-top {
+  padding-top: 2em;
+}
+
+.padded-bottom {
+  padding-bottom: 2em;
+}
+
+// Margins
+.neg-margin {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+// Backgrounds
+.bg-black {
+  background: #4a4a4a;
+}
+.bg-grey {
+  background: #EEEEEE;
+}
+.bg-blue {
+  background: #00a3e1;
+}
+.bg-dark-blue {
+  background: #3b5998;
+}
+.no-hover a {
+  text-decoration: none;
+  color: $gray-dark;
+  &:hover {
+    text-decoration: none;
+    color: $gray-dark;
+  }
+}
+.justify {
+  text-align: justify;
+}
+
+
+// CodeRay
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  margin-top: 10px;
+  width: 7px;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  height: 10px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

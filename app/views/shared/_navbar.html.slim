@@ -1,0 +1,28 @@
+nav.navbar.navbar-default.navbar-wagon.neg-margin role="navigation"
+  /! Brand and toggle get grouped for better mobile display
+  .row
+    .col-xs-9.col-sm-5.no-hover
+      a href=root_path
+        h1 NOE STAUFFERT
+        p
+          | Web developer
+    .col-xs-3.col-sm-7
+      .navbar-header
+        button.navbar-toggle.collapsed data-target="#navbar-menu" data-toggle="collapse" type="button"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      /! Collect the nav links, forms, and other content for toggling
+      #navbar-menu.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right.sticky-bottom
+          li class="#{controller_name == 'projects' ? 'current' : ''}"
+            =link_to "work", root_path
+          li class="#{action_name == 'about' ? 'current' : ''}"
+            =link_to "about", about_path
+          li class="#{action_name == 'resume' ? 'current' : ''}"
+            =link_to "resume", resume_path
+          li
+            a href="https://github.com/nozbzh" target="_blank" github
+          li class="#{controller_name == 'posts' ? 'current' : ''}"
+            =link_to "blog", blog_path

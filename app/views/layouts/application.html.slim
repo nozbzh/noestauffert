@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title
+      = if content_for?(:title) then yield(:title) + ' | '
+      | Noe Stauffert
+    = csrf_meta_tags
+    = action_cable_meta_tag
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    = stylesheet_link_tag    'application', media: 'all'
+
+  body class="#{controller_name} #{action_name} bg-grey"
+    .container-fluid
+      .row
+        .col-md-10.col-md-offset-1
+          = render 'shared/navbar'
+          = render 'shared/notifications'
+          = yield
+          = render 'shared/footer'
+    = javascript_include_tag 'application'
