@@ -1,0 +1,61 @@
+/usr/local/bin/ruby2.2 -r ./siteconf20160913-13981-17tax6n.rb extconf.rb
+checking for ffi_call() in -lffi... yes
+checking for ffi_prep_closure()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... no
+creating extconf.h
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling AbstractMemory.c
+AbstractMemory.c:255: warning: ‘memory_put_longdouble’ defined but not used
+AbstractMemory.c:255: warning: ‘memory_write_longdouble’ defined but not used
+AbstractMemory.c:255: warning: ‘memory_get_longdouble’ defined but not used
+AbstractMemory.c:255: warning: ‘memory_read_longdouble’ defined but not used
+AbstractMemory.c:255: warning: ‘memory_write_array_of_longdouble’ defined but not used
+AbstractMemory.c:255: warning: ‘memory_read_array_of_longdouble’ defined but not used
+AbstractMemory.c:291: warning: ‘memory_put_bool’ defined but not used
+AbstractMemory.c:291: warning: ‘memory_write_bool’ defined but not used
+AbstractMemory.c:291: warning: ‘memory_get_bool’ defined but not used
+AbstractMemory.c:291: warning: ‘memory_read_bool’ defined but not used
+AbstractMemory.c:291: warning: ‘memory_write_array_of_bool’ defined but not used
+AbstractMemory.c:291: warning: ‘memory_read_array_of_bool’ defined but not used
+AbstractMemory.c:407: warning: ‘memory_read_array_of_string’ defined but not used
+compiling StructByValue.c
+compiling ffi.c
+compiling Variadic.c
+compiling MemoryPointer.c
+compiling Thread.c
+compiling Type.c
+compiling Pointer.c
+compiling DynamicLibrary.c
+compiling DataConverter.c
+compiling StructByReference.c
+compiling Platform.c
+compiling ClosurePool.c
+compiling LastError.c
+compiling LongDouble.c
+compiling MappedType.c
+compiling Struct.c
+compiling ArrayType.c
+compiling MethodHandle.c
+compiling Types.c
+compiling Call.c
+Call.c: In function ‘rbffi_do_blocking_call’:
+Call.c:355: warning: implicit declaration of function ‘rb_thread_call_without_gvl’
+compiling FunctionInfo.c
+compiling StructLayout.c
+compiling Buffer.c
+compiling Function.c
+Function.c: In function ‘async_cb_event’:
+Function.c:563: warning: implicit declaration of function ‘rb_thread_call_without_gvl’
+linking shared-object ffi_c.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20160913-13981-1sejkdo
