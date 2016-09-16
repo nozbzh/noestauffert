@@ -82,4 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: blog_webfaction_production
+  database: noestauffert_production
