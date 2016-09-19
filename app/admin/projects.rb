@@ -40,8 +40,15 @@ ActiveAdmin.register Project do
       f.input :priority_order
       f.input :image, as: :file,
         hint: f.object.image.present? ? image_tag(f.object.image.url(:thumb)) : content_tag(:span, "no image yet")
-      f.input :summary, input_html: {class: 'redactor'}
-      f.input :content, input_html: {class: 'redactor'}
+      panel 'You just uploaded:', id: 'prev-panel', style: 'display: none;' do
+        tag('img', id: "img_prev", src: "#")
+      end
+      panel 'Summary' do
+        f.input :summary, input_html: {class: 'redactor'}
+      end
+      panel 'Content' do
+        f.input :content, input_html: {class: 'redactor'}
+      end
     end
 
     actions
