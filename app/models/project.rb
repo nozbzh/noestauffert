@@ -1,6 +1,7 @@
 class Project < ApplicationRecord
 
-  validates :name, :summary, :content, :priority_order, :image, presence: true
+  validates :name, :summary, :content, :priority_order, presence: true
+  validates :image, presence: true, on: :create
 
   mount_uploader :image, ProjectImageUploader
 

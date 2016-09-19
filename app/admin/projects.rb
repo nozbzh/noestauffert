@@ -38,7 +38,8 @@ ActiveAdmin.register Project do
       f.input :name
       f.input :published
       f.input :priority_order
-      f.input :image, as: :file
+      f.input :image, as: :file,
+        hint: f.object.image.present? ? image_tag(f.object.image.url(:thumb)) : content_tag(:span, "no image yet")
       f.input :summary, input_html: {class: 'redactor'}
       f.input :content, input_html: {class: 'redactor'}
     end
