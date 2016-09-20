@@ -4,7 +4,8 @@
 //= require jquery-readyselector
 //= require redactor-rails
 //= require redactor-rails/plugins
-//= require_tree .
+//= require projects
+//= require redactor-rails/config
 
 $(document).ready(function() {
   $(".redact img").addClass("img-responsive center-block");
