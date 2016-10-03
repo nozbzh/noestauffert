@@ -15,6 +15,14 @@ body {
   overflow: auto;
 }
 
+.projects {
+  a:hover {
+    img {
+     opacity: 0.7;
+    }
+  }
+}
+
 
 @media screen and (max-width: 991px) {
   .projects {
