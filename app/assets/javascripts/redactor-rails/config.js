@@ -1,9 +1,9 @@
 window.init_redactor = function(){
   var csrf_token = $('meta[name=csrf-token]').attr('content');
   var params;
-  if (csrf_param !== undefined && csrf_token !== undefined) {
-      params = csrf_param + "=" + encodeURIComponent(csrf_token);
-  }
+  // if (csrf_param !== undefined && csrf_token !== undefined) {
+  //     params = csrf_param + "=" + encodeURIComponent(csrf_token);
+  // }
   $('.redactor').redactor({
         "plugins": ['fontsize', 'fontcolor', 'fontfamily', 'fullscreen', 'textdirection', 'clips'],
         "imageUpload":"/redactor_rails/pictures?" + params,
